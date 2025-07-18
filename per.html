@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자</title>
+    <style>
+        p{
+            background-color: blueviolet;
+        }
+        .box{
+            background-color: pink;
+        }
+        .box::before{
+            content: "@@";
+            display: block;
+        }
+        .box::after{
+            content: "○";
+            display: block;
+        }
+        .box2{
+            background-color: brown;
+        }
+        .box2::before{
+            content: "<before>";
+                color: pink;
+                background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box2">Lorem ipsum dolor sit, amet con=ptas, delectus cum quis magnam voluptatum facere ipsa, sint sequi numquam temporibus dolores officia.</div>
+    <p class="box">dolor sit, amet con=ptas, </p>
+    <p>sit, amet con=ptas,</p>  
+</body>
+</html>
